@@ -115,3 +115,18 @@
     
 })(jQuery);
 
+function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+  
+    // Controlla la password
+    if (password === "anto-netta") {
+      document.getElementById("passwordForm").style.display = "none";
+      document.getElementById("content1").style.display = "block";
+    } else if (password === "wedding") {
+      document.getElementById("passwordForm").style.display = "none";
+      document.getElementById("content2").style.display = "block";
+    } else {
+      document.getElementById("errorMessage").textContent = "Password errata. Riprova.";
+    }
+  }
+  
