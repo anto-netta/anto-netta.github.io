@@ -9778,3 +9778,26 @@ a.text-dark:hover, a.text-dark:focus {
     border-right: none !important;
   }
 }
+
+
+#passwordForm {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#passwordForm input[type="password"] {
+  padding: 5px;
+}
+
+#passwordForm button {
+  padding: 5px 10px;
+}
+
+#errorMessage {
+  color: red;
+}
+
+#content {
+  text-align: center;
+  margin-top: 50px;
+}
