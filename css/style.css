@@ -2067,6 +2067,19 @@ textarea.form-control {
   color: #28a745;
 }
 
+#gif-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Nasconde la GIF inizialmente */
+}
+#gif-container:hover img {
+  opacity: 1; /* Mostra la GIF al passaggio del mouse */
+}
+
+
 .valid-tooltip {
   position: absolute;
   top: 100%;
@@ -9261,6 +9274,9 @@ button.bg-dark:focus {
 
 .text-white {
   color: #fff !important;
+}
+.text-blue {
+  color: #000066 !important;
 }
 
 .text-primary {
