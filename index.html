@@ -143,9 +143,10 @@
                     <div class="col-md-6 border-right border-primary">
                         <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
                             <img class="img-fluid mb-4" src="img/L'evento-1.jpg" alt="">
-                            <h4 class="mb-3">The Reception</h4>
-                            <p class="mb-2">123 Street, New York, USA</p>
-                            <p class="mb-0">12:00AM - 13:00PM</p>
+                            <h4 class="mb-3">La cerimonia</h4>
+                            <p class="mb-2">Basilica di Sant'Antonino</p>
+                            <p class="mb-1">La sposa arriva alle</p>
+                            <p class="mb-0">15:00</p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -161,7 +162,7 @@
         </div>
         <!-- L'evento End -->
 
-    <!-- About Start -->
+    <!-- About Start 
     <div class="container-fluid py-5" id="about">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
@@ -207,7 +208,7 @@
             </div>
         </div>
     </div>
-    <!-- About End -->
+About End -->
 
 <!--
      Story Start
@@ -429,26 +430,24 @@
     </div>
   Friends & Family End -->
 
-
-   
-    <!DOCTYPE html>
-    <html>
-    <head>
-      <title>Pagina protetta da password</title>
-      <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    <body>
-      <div id="passwordForm">
-        <h2>Inserisci la password per accedere:</h2>
+  <head>
+    <title>Pagina protetta da password</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="passwordForm">
+      <h2>Inserisci la password per accedere:</h2>
+      <form onsubmit="checkPassword(); return false;">
         <input type="password" id="passwordInput">
-        <button onclick="checkPassword()">Accedi</button>
-        <p id="errorMessage"></p>
-      </div>
-    
-      <div id="content1" style="display: none;">
-        <h1>Contenuto 1</h1>
-        <p>Benvenuto nel contenuto 1. La password inserita è "anto-netta".</p>
- <!-- RSVP Start -->
+        <button type="submit">Accedi</button>
+      </form>
+      <p id="errorMessage"></p>
+    </div>
+  
+    <div id="content1" style="display: none;">
+      <h1>Contenuto 1</h1>
+      <p>Benvenuto nel contenuto 1. La password inserita è "anto-netta".</p>
+       <!-- RSVP Start -->
     <div class="container-fluid py-5" id="rsvp">
         <div class="container py-5">
             <div class="section-title position-relative text-center">
@@ -499,16 +498,17 @@
         </div>
     </div>
     <!-- RSVP End -->
-      </div>
-    
-      <div id="content2" style="display: none;">
-        <h1>Contenuto 2</h1>
-        <p>Benvenuto nel contenuto 2. La password inserita è "wedding".</p>
-      </div>
-    
-      <script src="script.js"></script>
-    </body>
-    </html>
+    </div>
+  
+    <div id="content2" style="display: none;">
+      <h1>Contenuto 2</h1>
+      <p>Benvenuto nel contenuto 2. La password inserita è "wedding".</p>
+    </div>
+  
+    <script src="script.js"></script>
+  
+
+   
     
 
     <!-- Footer Start -->
