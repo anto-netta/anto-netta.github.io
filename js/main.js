@@ -122,12 +122,18 @@ function checkPassword() {
     if (password === "anto-netta") {
       document.getElementById("passwordForm").style.display = "none";
       document.getElementById("content1").style.display = "block";
-    } else if (password === "wedding") {
+    } else if (password === "ducati") {
       document.getElementById("passwordForm").style.display = "none";
       document.getElementById("content2").style.display = "block";
     } else {
-      document.getElementById("errorMessage").textContent = "Password errata. Riprova.";
+      document.getElementById("errorMessage").textContent = "Password errata. Riprova.(è tutto minuscolo)";
     }
   }
   
+  document.getElementById("rsvp-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+    document.getElementById("rsvp-form").style.display = "none"; // Hide RSVP form
+    document.getElementById("rsvp-title").style.display = "none"; // Hide RSVP title
+    document.getElementById("thank-you-message").style.display = "block"; // Display thank you message
+});
   
