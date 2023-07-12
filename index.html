@@ -39,18 +39,14 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
             <div class="navbar-nav ml-auto py-0">
                 <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#story" class="nav-item nav-link">Story</a>
                 <a href="#gallery" class="nav-item nav-link">Gallery</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
                 <h1 class="font-secondary text-white mb-n2">Netta <span class="text-primary">&</span> Anto</h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
-                <a href="#family" class="nav-item nav-link">Family</a>
-                <a href="#L'evento" class="nav-item nav-link">L'evento</a>
-                <a href="#rsvp" class="nav-item nav-link">RSVP</a>
-                <a href="#Contatti" class="nav-item nav-link">Contatti</a>
+                <a href="#evento" class="nav-item nav-link">L'evento</a>
+                <a href="#passwordForm" class="nav-item nav-link">Info</a>
             </div>
         </div>
     </nav>
@@ -93,6 +89,7 @@
                 </div>
                 
             </div>
+            <!--Freccette laterali-->
             <a class="carousel-control-prev justify-content-start" href="#header-carousel" data-slide="prev">
                 <div class="btn btn-primary px-0" style="width: 68px; height: 68px;">
                     <span class="carousel-control-prev-icon mt-3"></span>
@@ -127,7 +124,7 @@
     <!-- Video Modal End -->
 
         <!-- L'evento Start -->
-        <div class="container-fluid py-5" id="L'evento">
+        <div class="container-fluid py-5" id="evento">
             <div class="container py-5">
                 <div class="section-title position-relative text-center">
                     <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">L'evento</h6>
@@ -144,17 +141,18 @@
                         <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
                             <img class="img-fluid mb-4" src="img/L'evento-1.jpg" alt="">
                             <h4 class="mb-3">La cerimonia</h4>
-                            <p class="mb-2">Basilica di Sant'Antonino</p>
-                            <p class="mb-1">La sposa arriva alle</p>
+                            <p class="mb-2">Basilica di Sant'Antonino (PC)</p>
+                            <p class="mb-1">Lo sposo dovrebbe arrivare alle</p>
                             <p class="mb-0">15:00</p>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="text-center text-md-left ml-md-3">
                             <img class="img-fluid mb-4" src="img/L'evento-2.jpg" alt="">
-                            <h4 class="mb-3">Wedding Party</h4>
-                            <p class="mb-2">123 Street, New York, USA</p>
-                            <p class="mb-0">12:00AM - 13:00PM</p>
+                            <h4 class="mb-3">Dove</h4>
+                            <p class="mb-2"><a href="https://goo.gl/maps/T7y7zCUxiX3fUFUFA"><u>Qui</u></a> </p>
+                                <p class="mb-1">E' in piena ZTL, potresti venire in bici</p>
+                                <p class="mb-0"> Oppure la lasci<a href="https://goo.gl/maps/9a6R5Qpv9AQMQd5q8"> <u>Qui</u> </a> </p>
                         </div>
                     </div>
                 </div>
@@ -430,74 +428,82 @@ About End -->
     </div>
   Friends & Family End -->
 
-  <head>
-    <title>Pagina protetta da password</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
+
+
     <div id="passwordForm">
-      <h2>Inserisci la password per accedere:</h2>
-      <form onsubmit="checkPassword(); return false;">
-        <input type="password" id="passwordInput">
-        <button type="submit">Accedi</button>
-      </form>
-      <p id="errorMessage"></p>
+                <div class="section-title position-relative text-center" style="margin-bottom: 3px;">
+                    <h1 class="font-secondary display-4 text-blue">Maggiori info</h1>
+                    <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">a volte scoprire che non sei un robot evita molti casini</h6>
+                    <i class="far fa-heart text-dark"></i>
+                </div>
+                <div>
+                    <h5 class="font-secondary" style="letter-spacing: 3px;">di che marca è la moto ha netta?</h6>                          
+                    <form onsubmit="checkPassword(); return false;">
+                        <input type="text" id="passwordInput">
+                    <button class="btn btn-primary font-weight-bold py-1 px-2" type="submit">Accedi</button> 
+                    </form>
+                    <p id="errorMessage"></p>
+                </div>
     </div>
   
     <div id="content1" style="display: none;">
-      <h1>Contenuto 1</h1>
-      <p>Benvenuto nel contenuto 1. La password inserita è "anto-netta".</p>
-       <!-- RSVP Start -->
-    <div class="container-fluid py-5" id="rsvp">
-        <div class="container py-5">
-            <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
-                <h1 class="font-secondary display-4">Join Our Party</h1>
-                <i class="far fa-heart text-dark"></i>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center">
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-sm-6">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Name"/>
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Your Email"/>
-                                </div>
+      <!-- RSVP Start -->
+ <div class="container-fluid py-5" id="rsvp">
+    <div class="container py-5">
+        <div class="section-title position-relative text-center" id="rsvp-title">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
+            <h1 class="font-secondary display-4" id="rsvp-heading">Unisciti alla festa</h1>
+            <h6 class=".text-lowercase text-blue" style="letter-spacing: 2px;" id="rsvp-note">Se non confermato entro il 12/12/2023 portati un panino e una sedia</h6>
+            <i class="far fa-heart text-dark"></i>
+        </div>
+         <!-- Messaggio di ringraziamento start-->
+         <div id="thank-you-message" style="display: none;"> 
+            <h1 class="font-secondary display-4">Grazie!</h1>
+            <p>Sai che ci piacerebbe andare in viaggio a Bolzano</p>
+        </div>
+       <!-- Messaggio di ringraziamento end-->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center">
+                    <form id="rsvp-form">
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nome e Cognome" required/>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
-                                        <option>Number of Guest</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;">
-                                        <option>I'm Attending</option>
-                                        <option>All L'eventos</option>
-                                        <option>Wedding Party</option>
-                                    </select>
-                                </div>
+                            <div class="form-group col-sm-6">
+                                <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Email" required/>
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Message" required="required"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <select class="form-control bg-secondary border-0" style="height: 52px;" required>
+                                    <option>In quanti?</option>
+                                    <option>1</option>
+                                    <option>2 solo se ti è stato detto da Netta o Anto</option>
+                                </select>
                             </div>
-                            <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Submit</button>
+                            <div class="form-group col-sm-6">
+                                <select class="form-control bg-secondary border-0" style="height: 52px;" required>
+                                    <option>Dicci che farai</option>
+                                    <option>Non posso partecipare ho le lasagne che scadono</option>
+                                    <option>E' l'evento dell'anno!!, non mancherò</option>
+                                    <option>Vengo alla cerimonia e scappo col riso</option>
+                                </select>
                             </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Messaggio" required></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Submit</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- RSVP End -->
+</div>
+<!-- RSVP End -->
     </div>
   
     <div id="content2" style="display: none;">
@@ -505,20 +511,16 @@ About End -->
       <p>Benvenuto nel contenuto 2. La password inserita è "wedding".</p>
     </div>
   
-    <script src="script.js"></script>
-  
-
-   
-    
+    <script src="script.js"></script>    
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white py-5" id="Contatti" style="margin-top: 90px;">
         <div class="container text-center py-5">
             <div class="section-title position-relative text-center">
-                <h1 class="font-secondary display-3 text-white">Thank You</h1>
+                <h1 class="font-secondary display-3 text-white">Grazie</h1>
                 <i class="far fa-heart text-white"></i>
             </div>
-            <div class="d-flex justify-content-center mb-4">
+           <!-- <div class="d-flex justify-content-center mb-4">
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -532,6 +534,7 @@ About End -->
             <p class="m-0">&copy; <a class="text-primary" href="#">Domain Name</a>. Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
             </p>
         </div>
+    -->
     </div>
     <!-- Footer End -->
    
@@ -539,7 +542,8 @@ About End -->
     
 
     <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+    <!--<i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i> --> 
+    <a href="#evento"><i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i></a>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-outline-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
