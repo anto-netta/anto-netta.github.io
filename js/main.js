@@ -176,3 +176,12 @@ function mostraRisultato(event) {
     risultatoDiv.style.display = "block";
     form.style.display = "none";
 }
+
+function mostraCampoAltro(selectedValue) {
+    const altroInputWrapper = document.getElementById("altroInputWrapper");
+    if (selectedValue === "Altro") {
+        altroInputWrapper.style.display = "block";
+    } else {
+        altroInputWrapper.style.display = "none";
+    }
+}
