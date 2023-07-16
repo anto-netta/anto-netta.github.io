@@ -374,25 +374,27 @@ About End -->
       
       <!--End viaggio-->
 <!--Lista nozze Start -->
+
 <section id="list">
     <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
+    <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
         <!--  <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
-          <h1 class="font-secondary display-4 text-black">Lista nozze</h1>
         <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
           <i class="far fa-heart text-black"></i>
       </div>
-      <div>
-        <!--  <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
-          <h2>No fiori ma biglietti per i concerti</h2>
-        <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
-    
-      </div>
-    <p>Per il nostro viaggio di nozze e la nostra nuova casa, apprezziamo il vostro supporto.</p>
-    <ul>
+      
+    <p>Il vero dono è il vostro affetto e il tempo che ci dedicherete, ma se volete aggiungere un tocco di avventura al nostro viaggio in Perù, saremmo davvero entusiasti di ricevere un piccolo contributo. Grazie a ognuno di voi per essere parte di questa nuova avventura nella nostra vita!</p>
+    <ul style="list-style-type: none;">
         <li>IBAN: IT5555</li>
         <li>Intestatario: IT5555</li>
         <li>Banca: IT5555</li>
     </ul>
+    <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
+        <!--  <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
+        <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
+          <i class="far fa-heart text-black"></i>
+          </div>
+          </div>
 </section>
 
    
@@ -477,38 +479,37 @@ Story End -->
     </div>
   
     <div id="content1" style="display: none;">
-      <!-- RSVP Start -->
-<!-- RSVP Start -->
-<div class="container-fluid py-5" id="rsvp">
+<!-- Location Start -->
+<div class="container-fluid py-5" id="location">
     <div class="container py-5">
-        <div class="section-title position-relative text-center" id="rsvp-title">
+        <div class="section-title position-relative text-center" id="location-title">
             <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">a little party never killed nobody</h6>
-            <h1 class="font-secondary display-4" id="rsvp-heading">Che la festa abbia inzio</h1>
+            <h1 class="font-secondary display-4" id="location-heading">Che la festa abbia inizio !</h1>
             <i class="far fa-heart text-dark"></i>
         </div>
-         <!-- Messaggio di ringraziamento start-->
-         <div id="thank-you-message" style="display: none;"> 
-            <h1 class="font-secondary display-4">Grazie!</h1>
-            <p>Sai che ci piacerebbe andare in viaggio a Bolzano</p>
-        </div>
-       <!-- Messaggio di ringraziamento end-->
-       <div class="row">
-        <div class="col-md-6 border-right border-primary">
-            <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                <img class="img-fluid mb-4" src="img/L'evento-1.jpg" alt="">
-                <h3 class="mb-3">Location</h3>
+            <div class="row">
+                <div class="col-md-6 border-right border-primary">
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                        <h3 class="mb-3">Location</h3>
                 <p>Vi aspettiamo per festeggiare con noi presso:</p>
                 <h4><a href="https://goo.gl/maps/PEESSGXhyuBxZt3Z9" target="_blank"><i class="fas fa-map-marker-alt"></i> Locanda dei Melograni</a></h4>
                 <p>Località Maruffi, 55</p>
                 <p>29020 Caratta PC</p>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="text-center text-md-left ml-md-3">
-                <img src="peru-1.jpg" alt="Peru Image">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center text-md-left ml-md-0">
+                        <img class="img-fluid mb-5" src="img/location.jpeg" alt="">
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+<!-- Location end -->
+    
+<!-- RSVP Start -->
+       
      
     <div class="container-fluid py-5" id="rsvp">
         <div class="container py-5">
@@ -520,7 +521,12 @@ Story End -->
             </div>
 
       
-      
+        <!-- Messaggio di ringraziamento start-->
+        <div id="thank-you-message" style="display: none;"> 
+            <h1 class="font-secondary display-4">Grazie!</h1>
+            <p>Sai che ci piacerebbe andare in viaggio a Bolzano</p>
+        </div>
+       <!-- Messaggio di ringraziamento end-->
         
         <p style="margin-bottom: 50px;"></p>
 
@@ -540,19 +546,19 @@ Story End -->
                         <div class="form-row">
                             <div class="form-group col-sm-6">
                                 <select class="form-control bg-secondary border-0" style="height: 52px;" required>
-                                    <option>In quanti?</option>
+                                    <option selected disabled hidden>In quanti?</option>
                                     <option>1</option>
                                     <option>2 solo se ti è stato detto da Netta o Anto</option>
                                 </select>
                             </div>
                             <div class="form-group col-sm-6">
                                 <select class="form-control bg-secondary border-0" style="height: 52px;" required>
-                                    <option>Dicci che farai</option>
-                                    <option>Non posso partecipare ho le lasagne che scadono</option>
-                                    <option>E' l'evento dell'anno!!, non mancherò</option>
-                                    <option>Vengo alla cerimonia e scappo col riso</option>
+                                  <option selected disabled hidden>Dicci che farai</option>
+                                  <option>Non posso partecipare ho le lasagne che scadono</option>
+                                  <option>E' l'evento dell'anno!!, non mancherò</option>
+                                  <option>Vengo alla cerimonia e scappo col riso</option>
                                 </select>
-                            </div>
+                              </div>
                         </div>
                         <div class="form-group">
                             <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Lascia un messaggio se vuoi..." ></textarea>
@@ -567,9 +573,6 @@ Story End -->
     </div>
 </div>
 <!-- RSVP End -->
-    </div>
-<!-- RSVP End -->
-    </div>
   
     <div id="content2" style="display: none;">
       <h1>Contenuto 2</h1>
