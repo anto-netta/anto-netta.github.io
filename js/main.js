@@ -136,4 +136,43 @@ function checkPassword() {
     document.getElementById("rsvp-title").style.display = "none"; // Hide RSVP title
     document.getElementById("thank-you-message").style.display = "block"; // Display thank you message
 });
-  
+
+let codiciUsati = [];
+
+function generaCodiceCasuale() {
+    const lettere = "ABCDEFGHIJKLMNPQRSTUVWXYZ"; // Escludiamo la lettera 'O'
+    const cifre = "123456789"; // Escludiamo il numero '0'
+
+    let codice = "";
+    for (let i = 0; i < 2; i++) {
+        codice += lettere.charAt(Math.floor(Math.random() * lettere.length));
+    }
+    for (let i = 0; i < 2; i++) {
+        codice += cifre.charAt(Math.floor(Math.random() * cifre.length));
+    }
+
+    return codice;
+}
+
+function codiceGiaUsato(codice) {
+    return codiciUsati.includes(codice);
+}
+
+function mostraRisultato(event) {
+    event.preventDefault();
+    const form = event.target;
+    const risultatoDiv = document.getElementById("risultato");
+    const causaleP = document.getElementById("causale");
+
+    let codiceCasuale;
+    do {
+        codiceCasuale = generaCodiceCasuale();
+    } while (codiceGiaUsato(codiceCasuale));
+
+    codiciUsati.push(codiceCasuale);
+
+    causaleP.textContent = `Causale: "${codiceCasuale}_matrimonio_anto_netta"`;
+
+    risultatoDiv.style.display = "block";
+    form.style.display = "none";
+}
