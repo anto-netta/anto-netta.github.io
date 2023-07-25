@@ -3,14 +3,26 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Netta & Anto - Free Wedding Website Template</title>
+    <title>Anto & Netta - Free Wedding Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <!-- Favicon
+    ================================================== -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/ring-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/ring-icon.png"
+    />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -32,7 +44,7 @@
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="font-secondary text-white mb-n2">Netta <span class="text-primary">&</span> Anto</h1>
+            <h1 class="font-secondary text-white mb-n2">Anto <span class="text-primary">&</span> Netta</h1>
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -43,7 +55,7 @@
                 <a href="#gallery" class="nav-item nav-link">Gallery</a>
             </div>
             <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
-                <h1 class="font-secondary text-white mb-n2">Netta <span class="text-primary">&</span> Anto</h1>
+                <h1 class="font-secondary text-white mb-n2">Anto <span class="text-primary">&</span> Netta</h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
                 <a href="#evento" class="nav-item nav-link">L'evento</a>
@@ -64,7 +76,7 @@
                     <img class="position-absolute w-100 h-100" src="img/carousel-3.jpg" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Netta & Anto</h1>
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Anto & Netta</h1>
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h4 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">8 giugno 2024</h4>
                                 
@@ -81,7 +93,7 @@
                     <img class="position-absolute w-100 h-100" src="img/carousel-2.jpg" style="object-fit: cover;">
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <div class="p-3" style="max-width: 900px;">
-                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Netta & Anto</h1>
+                            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Anto & Netta</h1>
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Ci sposiamo !</h3>
                             </div>
@@ -290,7 +302,7 @@ About End -->
             <div class="gallery-item">
                 <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
                 <div class="overlay">
-                  <a href="img/gallery-1.gif" data-lightbox="gallery">
+                  <a href="img/gallery-11.jpg" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                   </a>
                 </div>
@@ -378,37 +390,63 @@ About End -->
 <section id="list">
     <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
     <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
-        <!--  <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
+         <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
         <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
           <i class="far fa-heart text-black"></i>
       </div>
       
     <p>Il vero dono è il vostro affetto e il tempo che ci dedicherete, ma se volete aggiungere un tocco di avventura al nostro viaggio in Perù, saremmo davvero entusiasti di ricevere un piccolo contributo. Grazie a ognuno di voi per essere parte di questa nuova avventura nella nostra vita!</p>
-   <p>Per ringraziarvi personalemnte vi chiediamo di compilare questo questionario:</p>
+   <p>Per ringraziarvi personalmente vi chiediamo di compilare questo questionario:</p>
     <div class="row justify-content-center">
+        <div id="risultato" class="text-center col-lg-8" style="display: none;">
+            <ul class="text-uppercase text-blue" style="list-style-type: none;">
+                <li>IBAN: IT5555</li>
+                <li>Intestatario: IT5555</li>
+                <li>Banca: IT5555</li>
+                <p id="causale"></p>
+            </ul>
+        </div>
+
         <div class="col-lg-8">
             <div class="text-center">
-                <form action="#" method="post" onsubmit="mostraRisultato(event)">
+                <form
+                name="ibanform"
+                id="ibanform"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSfLS3m9FzMrWjWWujChSs4_TNAjxEYtfnpt7rvOmQZ24DHVEg/viewform?usp=sf_link" 
+                method="post" 
+                onsubmit="mostraRisultato(event)"
+                onsubmit="submitted=true;">
                     <div class="form-row">
                         <div class="form-group col-sm-6">
-                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nome" required/>
+                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3" 
+                            placeholder="Nome" name="entry.1011907003" id="entry.1011907003"  required/>
                         </div>
                         <div class="form-group col-sm-6">
-                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Cognome" required/>
+                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3" 
+                            placeholder="Cognome" name="entry.1702041382" id="entry.1011907003" required/>
                         </div>
                         <div class="form-group col-sm-12">
-                            <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Email" required/>
+                            <input type="email" class="form-control bg-secondary border-0 py-4 px-3"
+                            placeholder="Email" name="entry.1194312101" id="entry.1194312101" required/>
                         </div>
+                        <!-- <div class="form-group col-sm-12">
+                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3"
+                           placeholder="causale" name="entry.1997830250" id="entry.1997830250" hidden/>
+                        </div> -->
                     </div>
-                   
                     <div>
-                        <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Invia <i class="fas fa-paper-plane"></i></button>
+                        <input type="hidden" name="entry.1997830250" value="">
+
+                        <button href="#" class="btn btn-primary font-weight-bold py-3 px-5"
+                         type="submit" id="iban-button">Invia
+                         <span class="fas fa-paper-plane"></span></button>
                     </div>
                 </form>
             </div>
+            </div>
         </div>
     </div>
-
+<!--
     <div id="risultato" style="display: none;">
         <ul class="text-uppercase text-blue" style="list-style-type: none;">
             <li>IBAN: IT5555</li>
@@ -417,7 +455,7 @@ About End -->
             <p id="causale"></p>
         </ul>
     </div>
-    
+    -->
     <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
         <!--  <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
         <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
