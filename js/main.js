@@ -213,3 +213,10 @@ if (form.attachEvent) {
 }
 
 document.getElementById("hidden-div").style.display = "none";
+
+
+document.getElementById('calendar-link').addEventListener('click', function(event) {
+  event.preventDefault();
+  var url = 'https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MmdqNTN2M3NrcXBxaDIxYnIwb2VqcTNocGggZ2FicmllbGUuc2ltb25ldHRhQG0&tmsrc=gabriele.simonetta%40gmail.com';
+  window.open(url, '_blank');
+});
