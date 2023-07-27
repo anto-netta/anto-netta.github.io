@@ -311,39 +311,57 @@
 
         <div class="col-lg-8">
             <div class="text-center">
-                <form
-                name="ibanform"
-                id="ibanform"
-                action="https://docs.google.com/forms/d/e/1FAIpQLSfLS3m9FzMrWjWWujChSs4_TNAjxEYtfnpt7rvOmQZ24DHVEg/viewform?usp=sf_link" 
-                method="post" 
-                onsubmit="mostraRisultato(event)"
-                onsubmit="submitted=true;">
+                <main class="container">
+                    <form   name="ibanform"
+                    id="ibanform"
+                    method="post" 
+                    onsubmit="mostraRisultato(event)"
+                    onsubmit="submitted=true;">
                     <div class="form-row">
-                        <div class="form-group col-sm-6">
-                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3" 
-                            placeholder="Nome" name="entry.1011907003" id="entry.1011907003"  required/>
-                        </div>
-                        <div class="form-group col-sm-6">
-                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3" 
-                            placeholder="Cognome" name="entry.1702041382" id="entry.1011907003" required/>
-                        </div>
-                        <div class="form-group col-sm-12">
-                            <input type="email" class="form-control bg-secondary border-0 py-4 px-3"
-                            placeholder="Email" name="entry.1194312101" id="entry.1194312101" required/>
-                        </div>
-                        <!-- <div class="form-group col-sm-12">
-                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3"
-                           placeholder="causale" name="entry.1997830250" id="entry.1997830250" hidden/>
-                        </div> -->
-                    </div>
-                    <div>
-                        <input type="hidden" name="entry.1997830250" value="">
+                        <label class="form-group col-sm-6" for="Nome">
+                          <input
+                            type="text"
+                            class="form-control bg-secondary border-0 py-4 px-3"
+                            placeholder="Nome"
+                            name="Nome"
+                            id="Nome"
+                            required
+                          />
+                        </label>
+                        <label class="form-group col-sm-6" for="Cognome">
+                          <input
+                            type="text"
+                            class="form-control bg-secondary border-0 py-4 px-3"
+                            placeholder="Cognome"
+                            name="Cognome"
+                            id="Cognome"
+                            required
+                          />
+                        </label>
+                        <label class="form-group col-sm-12" for="email">
+                          <input
+                            type="text"
+                            class="form-control bg-secondary border-0 py-4 px-3"
+                            placeholder="Email"
+                            name="email"
+                            id="email"
+                            required
+                          />
+                        </label>
+                            <input
+                            type="hidden"
+                            class="form-control bg-secondary border-0 py-4 px-3"
+                            name="caus"
+                            id="caus"
+                            value="nooo"
+                
+                          />
 
-                        <button href="#" class="btn btn-primary font-weight-bold py-3 px-5"
-                         type="submit" id="iban-button">Invia
-                         <span class="fas fa-paper-plane"></span></button>
+                        <button type="submit-iban" class="btn btn-primary font-weight-bold py-3 px-5 center" id="button-iban">Invia</button>
                     </div>
-                </form>
+                    </form>
+                   
+                  </main>
             </div>
             </div>
         </div>
@@ -366,68 +384,6 @@
           </div>
 </section>
 
-   
- <!-- Story Start 
- <div class="container-fluid py-5" id="story">
-    <div class="container pt-5 pb-3">
-        <div class="section-title position-relative text-center">
-            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Story</h6>
-            <h1 class="font-secondary display-4">Our Love Story</h1>
-            <i class="far fa-heart text-dark"></i>
-        </div>
-        <div class="container timeline position-relative p-0">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-right">
-                    <img class="img-fluid mr-md-3" src="img/story-1.jpg" alt="">
-                </div>
-                <div class="col-md-6 text-center text-md-left">
-                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                        <h4 class="mb-2">First Meet</h4>
-                        <p class="text-uppercase mb-2">01 Jan 2050</p>
-                        <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 text-center text-md-right">
-                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                        <h4 class="mb-2">First Date</h4>
-                        <p class="text-uppercase mb-2">01 Jan 2050</p>
-                        <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center text-md-left">
-                    <img class="img-fluid ml-md-3" src="img/story-2.jpg" alt="">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 text-center text-md-right">
-                    <img class="img-fluid mr-md-3" src="img/story-3.jpg" alt="">
-                </div>
-                <div class="col-md-6 text-center text-md-left">
-                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                        <h4 class="mb-2">Proposal</h4>
-                        <p class="text-uppercase mb-2">01 Jan 2050</p>
-                        <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 text-center text-md-right">
-                    <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                        <h4 class="mb-2">Enagagement</h4>
-                        <p class="text-uppercase mb-2">01 Jan 2050</p>
-                        <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center text-md-left">
-                    <img class="img-fluid ml-md-3" src="img/story-4.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-Story End -->
 
 <!-- Più informazioni Start-->
     <div id="passwordForm">
