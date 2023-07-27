@@ -115,8 +115,6 @@
   });
 })(jQuery);
 
-
-
 function checkPassword() {
   var password = document.getElementById("passwordInput").value;
   // Controlla la password
@@ -132,33 +130,27 @@ function checkPassword() {
   }
 }
 
-//RSVP START
-document
-  .getElementById("rsvp-form")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
-    document.getElementById("rsvp-form").style.display = "none"; // Hide RSVP form
-    document.getElementById("rsvp-title").style.display = "none"; // Hide RSVP title
-    document.getElementById("thank-you-message").style.display = "block"; // Display thank you message
-  });
+//ALTRO SHOW
 
-  function mostraCampoAltro(valoreSelezionato) {
-    var altroInputWrapper = document.getElementById('altroInputWrapper');
-    var altroInput = document.getElementById('altroInput');
+function mostraCampoAltro(valoreSelezionato) {
+  var altroInputWrapper = document.getElementById("altroInputWrapper");
+  var altroInput = document.getElementById("altroInput");
 
-    if (valoreSelezionato === 'Altro') {
-        altroInputWrapper.style.display = 'block'; // Mostra il campo "Specifica altro..."
-        altroInput.setAttribute('required', ''); // Imposta il campo come obbligatorio
-    } else {
-        altroInputWrapper.style.display = 'none'; // Nascondi il campo "Specifica altro..."
-        altroInput.removeAttribute('required'); // Rimuovi l'attributo "required"
-    }
+  if (valoreSelezionato === "Altro") {
+    altroInputWrapper.style.display = "block"; // Mostra il campo "Specifica altro..."
+    altroInput.setAttribute("required", ""); // Imposta il campo come obbligatorio
+  } else {
+    altroInputWrapper.style.display = "none"; // Nascondi il campo "Specifica altro..."
+    altroInput.removeAttribute("required"); // Rimuovi l'attributo "required"
+  }
 }
-//RSVP END
+//ALTRO SHOW END
 
 //GENERATORE DI CODICI
 
 let codiciUsati = [];
+let codeiban = "AB34";
+
 function generaCodiceCasuale() {
   const lettere = "ABCDEFGHIJKLMNPQRSTUVWXYZ"; // Escludiamo la lettera 'O'
   const cifre = "123456789"; // Escludiamo il numero '0'
@@ -190,18 +182,66 @@ function mostraRisultato(event) {
   codiciUsati.push(codiceCasuale);
 
   causaleP.textContent = `Causale: "${codiceCasuale}_matrimonio_anto_netta"`;
-
-  // Imposta il valore del campo nascosto "entry.1000000" con il codice casuale
-  const tokenInput = document.createElement("input");
-  tokenInput.type = "hidden";
-  tokenInput.name = "entry.1997830250";
-  tokenInput.value = codiceCasuale;
-  form.appendChild(tokenInput);
-
   risultatoDiv.style.display = "block";
   form.style.display = "none";
-
-  // Invia il modulo al Google Form
-  form.attachEvent("submit", processForm);
-  //form.submit();
+  codeiban = codiceCasuale;
 }
+
+//GOOGLE FORM IBAN
+
+("use strict");
+const Nome = document.querySelector("#Nome");
+const Cognome = document.querySelector("#Cognome");
+const email = document.querySelector("#email");
+//const caus = codeiban;
+const button = document.querySelector("#button-iban");
+const form = document.querySelector("#ibanform");
+const GOOGLE_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfLS3m9FzMrWjWWujChSs4_TNAjxEYtfnpt7rvOmQZ24DHVEg/formResponse"; // your google form response URL e.g https://docs.google.com/forms/u/0/d/e/1FAIpQLSdfVQ2ycW2AROnbmCmVw8I8Uc7Z40BZtjleJ_-IQjgtznQ_4cJl/formResponse
+
+const handleSubmit = async (event) => {
+  event.preventDefault();
+  const NomeValue = Nome.value;
+  const CognomeValue = Cognome.value;
+  const emailValue = email.value;
+  // const causValue = caus.value;
+  const formData = {
+    "entry.1011907003": NomeValue,
+    "entry.1702041382": CognomeValue,
+    "entry.1194312101": emailValue,
+    "entry.1997830250": codeiban,
+  };
+  const appendedFormData = newFormData({ ...formData });
+
+  try {
+    button.disabled = true;
+    button.textContent = "processing...";
+    const response = await fetch(GOOGLE_FORM_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: appendedFormData,
+    });
+    alert("Grazie, usa la causale che vedi scritta sotto");
+  } catch (error) {
+    alert("Something went wrong, please try again");
+    console.log(error);
+  } finally {
+    button.disabled = false;
+    button.textContent = "Invia";
+  }
+};
+
+form.addEventListener("submit", handleSubmit);
+
+// A helper function to help convert the data to FormData
+const newFormData = (inputs) => {
+  const formData = new FormData();
+  const newArr = Object.entries(inputs);
+  newArr.map((item) => {
+    return formData.append(`${item[0]}`, item[1]);
+  });
+  return formData;
+};
