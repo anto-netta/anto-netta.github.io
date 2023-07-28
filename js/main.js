@@ -193,7 +193,7 @@ function mostraRisultato(event) {
 const Nome = document.querySelector("#Nome");
 const Cognome = document.querySelector("#Cognome");
 const email = document.querySelector("#email");
-//const caus = codeiban;
+const comment = document.querySelector("#comment");
 const button = document.querySelector("#button-iban");
 const form = document.querySelector("#ibanform");
 const GOOGLE_FORM_URL =
@@ -204,12 +204,13 @@ const handleSubmit = async (event) => {
   const NomeValue = Nome.value;
   const CognomeValue = Cognome.value;
   const emailValue = email.value;
-  // const causValue = caus.value;
+  const commentValue = comment.value;
   const formData = {
     "entry.1011907003": NomeValue,
     "entry.1702041382": CognomeValue,
     "entry.1194312101": emailValue,
     "entry.1997830250": codeiban,
+    "entry.1399896089": commentValue,
   };
   const appendedFormData = newFormData({ ...formData });
 
