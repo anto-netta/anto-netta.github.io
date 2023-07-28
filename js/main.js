@@ -246,3 +246,72 @@ const newFormData = (inputs) => {
   });
   return formData;
 };
+
+//GOOGLE FORM RSVP
+
+("use strict");
+const Nome_Cognome = document.querySelector("#Nome_Cognome");
+const cena = document.querySelector("#cena");
+const e_mail = document.querySelector("#e_mail");
+const presenza = document.querySelector("#presenza");
+const allergia = document.querySelector("#allergia");
+const altro = document.querySelector("#altro");
+const commento = document.querySelector("#commento");
+const bottone = document.querySelector("#button_rsvp");
+const questionario = document.querySelector("#rsvpform");
+const GOOGLE_questonario_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSc4WtHCRT3p18zJJ4MrWjv1ARFcL8HcBZkErPJykaTcBSGPaw/formResponse"; // your google form response URL e.g https://docs.google.com/forms/u/0/d/e/1FAIpQLSdfVQ2ycW2AROnbmCmVw8I8Uc7Z40BZtjleJ_-IQjgtznQ_4cJl/formResponse
+
+const handlSubmit = async (event) => {
+  event.preventDefault();
+  const Nome_CognomeValue = Nome_Cognome.value;
+  const cenaValue = cena.value;
+  const e_mailValue = e_mail.value;
+  const presenzaValue = presenza.value;
+  const allergiaValue = allergia.value;
+  const altroValue = altro.value;
+  const commentoValue = commento.value;
+  const formData = {
+    "entry.1011907003": Nome_CognomeValue,
+    "entry.1991254785": e_mailValue,
+    "entry.1823152219": cenaValue,
+    "entry.1194312101": presenzaValue,
+    "entry.1997830250": allergiaValue,
+    "entry.1093723934": altroValue,
+    "entry.1399896089": commentoValue,
+  };
+  const appendedFormData = newFormDat({ ...formData });
+
+  try {
+    button.disabled = true;
+    button.textContent = "processing...";
+    const response = await fetch(GOOGLE_FORM_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: appendedFormData,
+    });
+    alert("Grazie, usa la causale che vedi scritta sotto");
+  } catch (error) {
+    alert("Something went wrong, please try again");
+    console.log(error);
+  } finally {
+    button.disabled = false;
+    button.textContent = "Invia";
+  }
+};
+
+form.addEventListener("submit", handlSubmit);
+
+// A helper function to help convert the data to FormData
+const newFormDat = (inputs) => {
+  const formData = new FormData();
+  const newArr = Object.entries(inputs);
+  newArr.map((item) => {
+    return formData.append(`${item[0]}`, item[1]);
+  });
+  return formData;
+};
+2;

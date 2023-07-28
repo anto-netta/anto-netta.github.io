@@ -290,8 +290,8 @@
 <!--Lista nozze Start -->
 
 <section id="list">
-    <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
-    <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
+
+    <div class="section-title position-relative text-center" style="margin-bottom: 80px;">
          <!--<h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
         <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
           <i class="far fa-heart text-black"></i>
@@ -308,7 +308,6 @@
                 <p id="causale"></p>
             </ul>
         </div>
-
         <div class="col-lg-8">
             <div class="text-center">
                 <main class="container">
@@ -317,7 +316,7 @@
                     method="post" 
                     onsubmit="mostraRisultato(event)"
                     onsubmit="submitted=true;">
-                    <div class="form-row">
+                    <div class="form-row row justify-content-center">
                         <label class="form-group col-sm-6" for="Nome">
                           <input
                             type="text"
@@ -366,30 +365,18 @@
                               
                             />
                           </label>
-                        <button type="submit-iban" class="btn btn-primary font-weight-bold py-3 px-5 center" id="button-iban">Invia</button>
+                        <button type="submit-iban" class="btn btn-primary font-weight-bold py-3 px-5" id="button-iban">Invia</button>
                     </div>
-                    </form>
-                   
+                    </form> 
                   </main>
             </div>
             </div>
         </div>
     </div>
-<!--
-    <div id="risultato" style="display: none;">
-        <ul class="text-uppercase text-blue" style="list-style-type: none;">
-            <li>IBAN: IT5555</li>
-            <li>Intestatario: IT5555</li>
-            <li>Banca: IT5555</li>
-            <p id="causale"></p>
-        </ul>
-    </div>
-    -->
     <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
         <!--  <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
         <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
           <i class="far fa-heart text-black"></i>
-          </div>
           </div>
 </section>
 
@@ -462,7 +449,9 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
-                        <form id="rsvp-form">
+                        <form 
+                        id="rsvpform"
+                        method="post" >
                             <div class="form-row">
                                 <div class="form-group col-sm-6">
                                     <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nome e Cognome" required/>
