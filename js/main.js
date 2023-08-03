@@ -235,7 +235,7 @@ const handleSubmit = async (event) => {
   }
 };
 
-form.addEventListener("submit", handleSubmit);
+if (form != null) form.addEventListener("submit", handleSubmit);
 
 // A helper function to help convert the data to FormData
 const newFormData = (inputs) => {
@@ -255,13 +255,12 @@ const cena = document.querySelector("#cena");
 const e_mail = document.querySelector("#e_mail");
 const presenza = document.querySelector("#presenza");
 const allergia = document.querySelector("#allergia");
-const altro = document.querySelector("#altro");
+const altro = document.querySelector("#altroInput");
 const commento = document.querySelector("#commento");
 const bottone = document.querySelector("#button_rsvp");
 const questionario = document.querySelector("#rsvpform");
 const GOOGLE_questonario_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSc4WtHCRT3p18zJJ4MrWjv1ARFcL8HcBZkErPJykaTcBSGPaw/formResponse"; // your google form response URL e.g https://docs.google.com/forms/u/0/d/e/1FAIpQLSdfVQ2ycW2AROnbmCmVw8I8Uc7Z40BZtjleJ_-IQjgtznQ_4cJl/formResponse
-
+  "https://docs.google.com/forms/d/e/1FAIpQLSc4WtHCRT3p18zJJ4MrWjv1ARFcL8HcBZkErPJykaTcBSGPaw/formResponse"; // your google form response URL
 const handlSubmit = async (event) => {
   event.preventDefault();
   const Nome_CognomeValue = Nome_Cognome.value;
@@ -269,49 +268,49 @@ const handlSubmit = async (event) => {
   const e_mailValue = e_mail.value;
   const presenzaValue = presenza.value;
   const allergiaValue = allergia.value;
-  const altroValue = altro.value;
+  const altroValue = altroInput.value;
   const commentoValue = commento.value;
-  const formData = {
+  const dati = {
     "entry.1011907003": Nome_CognomeValue,
     "entry.1991254785": e_mailValue,
     "entry.1823152219": cenaValue,
     "entry.1194312101": presenzaValue,
     "entry.1997830250": allergiaValue,
     "entry.1093723934": altroValue,
-    "entry.1399896089": commentoValue,
+    "entry.367979752": commentoValue,
   };
-  const appendedFormData = newFormDat({ ...formData });
-
+  const appendedDati = newFormDat({ ...dati });
   try {
-    button.disabled = true;
-    button.textContent = "processing...";
-    const response = await fetch(GOOGLE_FORM_URL, {
+    bottone.disabled = true;
+    bottone.textContent = "processing...";
+    const response = await fetch(GOOGLE_questonario_URL, {
       method: "POST",
       mode: "no-cors",
       headers: {
         "Content-Type": "application/json",
       },
-      body: appendedFormData,
+      body: appendedDati,
     });
-    alert("Grazie, usa la causale che vedi scritta sotto");
   } catch (error) {
     alert("Something went wrong, please try again");
     console.log(error);
   } finally {
-    button.disabled = false;
-    button.textContent = "Invia";
+    bottone.disabled = false;
+    bottone.textContent = "Inviato";
+    setTimeout(function () {
+      questionario.reset();
+    }, 1000);
   }
 };
 
-form.addEventListener("submit", handlSubmit);
+questionario.addEventListener("submit", handlSubmit);
 
-// A helper function to help convert the data to FormData
+// A helper function to help convert the data to Dati
 const newFormDat = (inputs) => {
-  const formData = new FormData();
+  const dati = new FormData();
   const newArr = Object.entries(inputs);
   newArr.map((item) => {
-    return formData.append(`${item[0]}`, item[1]);
+    return dati.append(`${item[0]}`, item[1]);
   });
-  return formData;
+  return dati;
 };
-2;

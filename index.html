@@ -296,12 +296,7 @@
     </div>
     <div class="position-relative text-center">
     <p>Il vero dono è il vostro affetto e il tempo che ci dedicherete, ma se volete aggiungere un tocco di avventura al nostro viaggio in Perù, saremmo davvero entusiasti di ricevere un piccolo contributo. Grazie a ognuno di voi per essere parte di questa nuova avventura nella nostra vita!</p>
-    <p> Casa nostra <i class="fas fa-home"></i>  è piccolina ma per ora ben accessoriata, aggiungere qualsiasi altra cosa comporterebbe l'uscire noi di casa.</p>
-    <br>
-    <p> Per cui non faremo una vera lista nozze.</p>
-    <br>
-    <p> Se non vedete l'ora di donarci il nuovo frulltatore vi chiediamo di tenerlo per quando avremo più spazio. </p>
-    <p>Per potervi ringraziare personalmente vi chiediamo, prima di condividervi gli estremi bancari  <i class="fas fa-university"></i>
+     <p>Per potervi ringraziare personalmente vi chiediamo, prima di condividervi gli estremi bancari  <i class="fas fa-university"></i>
         , di compilare questo questionario:</p>
     </div>
     <div class="row justify-content-center">
@@ -434,74 +429,104 @@
     </div>
     <!-- Location end -->
         
-    <!-- RSVP Start -->
-        <div class="container-fluid py-5" id="rsvp">
-            <div class="container py-5">
-                <div class="section-title position-relative text-center" id="rsvp-title">
-                    <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
-                    <h1 class="font-secondary display-4" id="rsvp-heading">Unisciti alla festa</h1>
-                    <h6 class=".text-lowercase text-blue" style="letter-spacing: 2px;" id="rsvp-note">Se non confermato entro il 12/12/2023 portati un panino e una sedia</h6>
-                    <i class="far fa-heart text-dark"></i>
-                </div>
-                <!-- Messaggio di ringraziamento start-->
-                <div id="thank-you-message" style="display: none;"> 
-                    <h1 class="font-secondary display-4">Grazie!</h1>
-                    <p> Non vediamo l'ora che sia l'8 giugno, e festeggiare assieme</p>
-                </div>
-                <!-- Messaggio di ringraziamento end-->        
-                <p style="margin-bottom: 50px;"></p>
+      <!-- RSVP Start -->
+      <div class="container-fluid py-5" id="rsvp">
+        <div class="container py-5">
+            <div class="section-title position-relative text-center" id="rsvp-title">
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
+                <h1 class="font-secondary display-4" id="rsvp-heading">Unisciti alla festa</h1>
+                <h6 class=".text-lowercase text-blue" style="letter-spacing: 2px;" id="rsvp-note">Se non confermato entro il 12/12/2023 portati un panino e una sedia</h6>
+                <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center">
-                        <form 
-                        id="rsvpform"
-                        method="post" >
-                            <div class="form-row">
-                                <div class="form-group col-sm-6">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nome e Cognome" required/>
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Email" required/>
-                                </div>
+            <!-- Messaggio di ringraziamento start-->
+            <div id="thank-you-message" style="display: none;"> 
+                <h1 class="font-secondary display-4">Grazie!</h1>
+                <p> Non vediamo l'ora che sia l'8 giugno, e festeggiare assieme</p>
+            </div>
+            <!-- Messaggio di ringraziamento end-->        
+            <p style="margin-bottom: 50px;"></p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center">
+                    <form 
+                    id="rsvpform"
+                    method="post" >
+                        <div class="form-row">
+                            <div class="form-group col-sm-6"for="Nome_Cognome">
+                                <input type="text" class="form-control bg-secondary border-0 py-4 px-3"
+                                 placeholder="Nome e Cognome"
+                                 name="Nome_Cognome"
+                                 id="Nome_Cognome"
+                                 required/>
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;" required>
-                                        <option value="" selected disabled hidden>Dicci che farai</option>
-                                        <option>È l'evento dell'anno! Non mancherò</option>
-                                        <option>Vengo solo alla cerimonia e scappo col riso</option>
-                                        <option>Non posso partecipare, ho le lasagne che scadono</option>
-                                    </select>
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;" onchange="mostraCampoAltro(this.value)" required>
-                                        <option value=""selected disabled hidden>Allergia, intolleranze, regime alimentari </option>
-                                        <option>Nulla, mangio anche i sassi</option>
-                                        <option>Vegani</option>
-                                        <option>Vegetariani</option>
-                                        <option>Intolleranti lattosio</option>
-                                        <option>Celiaci</option>
-                                        <option value="Altro">Altro...</option>
-                                    </select>
-                                </div>
-                            
+                            <div class="form-group col-sm-6" >
+                                <input type="email"     
+                                id="e_mail"
+                                name="e_mail"
+                                class="form-control bg-secondary border-0 py-4 px-3"
+                                placeholder="Email"
+                                required/>
                             </div>
-                            <div class="form-group" id="altroInputWrapper" style="display: none;"> <!-- Campo di testo personalizzato per l'opzione "Altro" che inizialmente è nascosto -->
-                                <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Specifica altro..." id="altroInput">
+                        </label>
+                        <input
+                        type="hidden"
+                        class="form-control bg-secondary border-0 py-4 px-3"
+                        name="cena"
+                        id="cena"
+                        value="Invitato a cena"
+                      />
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-sm-6">
+                                <select class="form-control bg-secondary border-0" style="height: 52px;" 
+                                name="presenza"
+                                id="presenza"
+                                required>
+                                    <option value="" selected disabled hidden>Dicci che farai</option>
+                                    <option>È l'evento dell'anno! Non mancherò</option>
+                                    <option>Vengo solo alla cerimonia e scappo col riso</option>
+                                    <option>Non posso partecipare, ho le lasagne che scadono</option>
+                                </select>
+                                
                             </div>
-                            <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Lascia un messaggio se vuoi..."></textarea>
+                            <div class="form-group col-sm-6">
+                                <select class="form-control bg-secondary border-0" style="height: 52px;" onchange="mostraCampoAltro(this.value)" 
+                                name="allergia"
+                                id="allergia"
+                                required>
+                                    <option value=""selected disabled hidden>Allergia, intolleranze, regime alimentari </option>
+                                    <option>Nulla, mangio anche i sassi</option>
+                                    <option>Vegani</option>
+                                    <option>Vegetariani</option>
+                                    <option>Intolleranti lattosio</option>
+                                    <option>Celiaci</option>
+                                    <option value="Altro">Altro...</option>
+                                </select>
                             </div>
-                            <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Invia <i class="fas fa-paper-plane"></i></button>
-                            </div>
-                        </form>
-                    </div>
+                        
+                        </div>
+                        <div class="form-group" id="altroInputWrapper" style="display: none;"> <!-- Campo di testo personalizzato per l'opzione "Altro" che inizialmente è nascosto -->
+                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Specifica altro..." 
+                            name="altroInput"
+                            id="altroInput">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control bg-secondary border-0 py-2 px-3" 
+                            rows="5" 
+                            placeholder="Lascia un messaggio se vuoi..."
+                            name="commento"
+                            id="commento"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="button_rsvp">Invia <i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
-    </div>
-    <!-- RSVP End -->
+        </div>
+</div>
+<!-- RSVP End -->  
 
 </div>
 <!--Content 1 END-->
@@ -528,7 +553,6 @@
                     <div class="col-md-6">
                         <div class="text-center text-md-left ml-md-0">
                             <img class="img-fluid mb-5" src="img/location.jpeg" alt="">
-                            
                         </div>
                     </div>
                 </div>
