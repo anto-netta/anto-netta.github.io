@@ -154,7 +154,7 @@
                 <div class="row">
                     <div class="col-md-6 border-right border-primary">
                         <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                            <img class="img-fluid mb-4" src="img/L'evento-1.jpg" alt="">
+                          <!--<img class="img-fluid mb-4" src="img/L'evento-1.jpg" alt="">-->
                             <h4 class="mb-3">Quando</h4>
                             <p class="mb-2">8 Giugno 2024</p>
                             <p class="mb-1">Ore 15:30</p>
@@ -163,7 +163,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="text-center text-md-left ml-md-3">
-                            <img class="img-fluid mb-4" src="img/L'evento-2.jpg" alt="">
+                           <!-- <img class="img-fluid mb-4" src="img/L'evento-2.jpg" alt=""> -->
                             <h4 class="mb-3">Dove</h4>
                             <p class="mb-2"> <a href="https://goo.gl/maps/T7y7zCUxiX3fUFUFA"><u>Basilica di Sant'Antonino (PC) </u></a> </p>
                                 <p class="mb-1"> É in piena ZTL, potresti venire in bici <i class="fas fa-bicycle"></i> </p>
@@ -182,7 +182,7 @@
                         <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=MmdqNTN2M3NrcXBxaDIxYnIwb2VqcTNocGggZ2FicmllbGUuc2ltb25ldHRhQG0&amp;tmsrc=gabriele.simonetta%40gmail.com"><img border="0" src="https://www.google.com/calendar/images/ext/gc_button1_it.gif"></a>
                         -->
                         
-                        <a id="calendar-link" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MmdqNTN2M3NrcXBxaDIxYnIwb2VqcTNocGggZ2FicmllbGUuc2ltb25ldHRhQG0&tmsrc=gabriele.simonetta%40gmail.com&ctz=UTC" target="_blank"> <u>salvalo nel calendario </u>
+                        <a id="calendar-link" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MmdqNTN2M3NrcXBxaDIxYnIwb2VqcTNocGggZ2FicmllbGUuc2ltb25ldHRhQG0&tmsrc=gabriele.simonetta%40gmail.com" target="_blank"> <u>salvalo nel calendario </u>
                             <i class="fas fa-solid fa-calendar-day"></i>
                           </a>     
                           <p>(aprilo in un altra scheda se hai android <i class="fab fa-android"></i>)</p>                   
@@ -247,7 +247,7 @@
               </div>
               <div>
                 <!--  <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
-                  <h2> Vorremmo visitare le americhe e bere mate</h2>
+                  <h2> Vorremmo visitare le americhe e bere tanto mate <i class="fas fa-coffee"></i></h2>
                 <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
             
               </div>
@@ -258,7 +258,7 @@
                   <img src="img/peru-1.jpg" alt="Machu Picchu">
                   <div class="gallery-item-description">
                     <h3 class="title">Machu Picchu</h3>
-                    <p>Esplora le antiche rovine di Machu Picchu, una delle sette meraviglie del mondo.</p>
+                    <p>Machu Picchu, una delle sette meraviglie del mondo.</p>
                   </div>
                 </div>
               </div>
@@ -267,7 +267,7 @@
                   <img src="img/peru-2.jpg" alt="Valle Sacra">
                   <div class="gallery-item-description">
                     <h3 class="title">Valle Sacra</h3>
-                    <p>Immergiti nella bellezza naturale della Valle Sacra e scopri antichi siti archeologici.</p>
+                    <p>Valle del fiume Urubamba nelle Ande peruviane, vicino a Cusco, capitale dell'Impero Inca.</p>
                   </div>
                 </div>
               </div>
@@ -276,7 +276,7 @@
                   <img src="img/peru-3.jpg" alt="Lago Titicaca">
                   <div class="gallery-item-description">
                     <h3 class="title">Lago Titicaca</h3>
-                    <p>Goditi la serenità del Lago Titicaca, il lago navigabile più alto del mondo.</p>
+                    <p>Situato sulla catena delle Ande, è uno dei più grandi del Sud America, nonché il lago navigabile alla maggiore altitudine del mondo</p>
                   </div>
                 </div>
               </div>
@@ -457,12 +457,12 @@
                                 <input type="text" class="form-control bg-secondary border-0 py-4 px-3"
                                  placeholder="Nome e Cognome"
                                  name="Nome_Cognome"
-                                 id="Nome_Cognome"
+                                 id="Nome_Cognome_rsvp"
                                  required/>
                             </div>
                             <div class="form-group col-sm-6" >
                                 <input type="email"     
-                                id="e_mail"
+                                id="e_mail_rsvp"
                                 name="e_mail"
                                 class="form-control bg-secondary border-0 py-4 px-3"
                                 placeholder="Email"
@@ -473,7 +473,7 @@
                         type="hidden"
                         class="form-control bg-secondary border-0 py-4 px-3"
                         name="cena"
-                        id="cena"
+                        id="cena_rsvp"
                         value="Invitato a cena"
                       />
                         </div>
@@ -481,7 +481,7 @@
                             <div class="form-group col-sm-6">
                                 <select class="form-control bg-secondary border-0" style="height: 52px;" 
                                 name="presenza"
-                                id="presenza"
+                                id="presenza_rsvp"
                                 required>
                                     <option value="" selected disabled hidden>Dicci che farai</option>
                                     <option>È l'evento dell'anno! Non mancherò</option>
@@ -493,7 +493,7 @@
                             <div class="form-group col-sm-6">
                                 <select class="form-control bg-secondary border-0" style="height: 52px;" onchange="mostraCampoAltro(this.value)" 
                                 name="allergia"
-                                id="allergia"
+                                id="allergia_rsvp"
                                 required>
                                     <option value=""selected disabled hidden>Allergia, intolleranze, regime alimentari </option>
                                     <option>Nulla, mangio anche i sassi</option>
@@ -508,18 +508,18 @@
                         </div>
                         <div class="form-group" id="altroInputWrapper" style="display: none;"> <!-- Campo di testo personalizzato per l'opzione "Altro" che inizialmente è nascosto -->
                             <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Specifica altro..." 
-                            name="altroInput"
-                            id="altroInput">
+                            name="altroInput_rsvp"
+                            id="altroInput_rsvp">
                         </div>
                         <div class="form-group">
                             <textarea class="form-control bg-secondary border-0 py-2 px-3" 
                             rows="5" 
                             placeholder="Lascia un messaggio se vuoi..."
                             name="commento"
-                            id="commento"></textarea>
+                            id="commento_rsvp"></textarea>
                         </div>
                         <div>
-                            <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="button_rsvp">Invia <i class="fas fa-paper-plane"></i></button>
+                            <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="rsvpButton">Invia <i class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
                 </div>
@@ -530,7 +530,7 @@
 
 </div>
 <!--Content 1 END-->
-  
+<!--Content 2 STRART-->
     <div id="content2" style="display: none;">
        <!-- Location Start -->
     <div class="container-fluid py-5" id="location">
@@ -561,55 +561,96 @@
     <!-- Location end -->
         
     <!-- RSVP Start -->
-        <div class="container-fluid py-5" id="rsvp">
-            <div class="container py-5">
-                <div class="section-title position-relative text-center" id="rsvp-title">
-                    <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
-                    <h1 class="font-secondary display-4" id="rsvp-heading">Unisciti alla festa</h1>
-                    <i class="far fa-heart text-dark"></i>
-                </div>
-                <!-- Messaggio di ringraziamento start-->
-                <div id="thank-you-message" style="display: none;"> 
-                    <h1 class="font-secondary display-4">Grazie!</h1>
-                    <p> Non vediamo l'ora che sia l'8 giugno, e festeggiare assieme</p>
-                </div>
-                <!-- Messaggio di ringraziamento end-->        
-                <p style="margin-bottom: 50px;"></p>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text-center">
-                        <form id="rsvp-form-2">
-                            <div class="form-row">
-                                <div class="form-group col-sm-6">
-                                    <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Nome e Cognome" required/>
-                                </div>
-                                <div class="form-group col-sm-6">
-                                    <input type="email" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Email" required/>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-sm-12">
-                                    <select class="form-control bg-secondary border-0" style="height: 52px;" required>
-                                        <option value="" selected disabled hidden>Dicci che farai</option>
-                                        <option>Vengo alla cerimonia e alla torta solo se è buona</option>
-                                        <option>Vengo solo alla cerimonia e scappo col riso</option>
-                                        <option>Non posso partecipare, ho le lasagne che scadono</option>
-                                    </select>
-                                </div>                          
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control bg-secondary border-0 py-2 px-3" rows="5" placeholder="Lascia un messaggio se vuoi..."></textarea>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit">Invia <i class="fas fa-paper-plane"></i></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid py-5" id="rsvp">
+    <div class="container py-5">
+        <div class="section-title position-relative text-center" id="rsvp-title">
+            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
+            <h1 class="font-secondary display-4" id="rsvp-heading">Unisciti alla festa</h1>
+            <h6 class=".text-lowercase text-blue" style="letter-spacing: 2px;" id="rsvp-note">Se non confermato entro il 12/12/2023 portati un panino e una sedia</h6>
+            <i class="far fa-heart text-dark"></i>
+        </div>
+        <!-- Messaggio di ringraziamento start-->
+        <div id="thank-you-message" style="display: none;"> 
+            <h1 class="font-secondary display-4">Grazie!</h1>
+            <p> Non vediamo l'ora che sia l'8 giugno, e festeggiare assieme</p>
+        </div>
+        <!-- Messaggio di ringraziamento end-->        
+        <p style="margin-bottom: 50px;"></p>
     </div>
-    <!-- RSVP End -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="text-center">
+                <form 
+                id="cakeform"
+                method="post" >
+                    <div class="form-row">
+                        <div class="form-group col-sm-6"for="Nome_Cognome">
+                            <input type="text" class="form-control bg-secondary border-0 py-4 px-3"
+                             placeholder="Nome e Cognome"
+                             name="Nome_Cognome"
+                             id="Nome_Cognome_cake"
+                             required/>
+                        </div>
+                        <div class="form-group col-sm-6" >
+                            <input type="email"     
+                            id="e_mail_cake"
+                            name="e_mail"
+                            class="form-control bg-secondary border-0 py-4 px-3"
+                            placeholder="Email"
+                            required/>
+                        </div>
+                    </label>
+                    <input
+                    type="hidden"
+                    class="form-control bg-secondary border-0 py-4 px-3"
+                    name="cena"
+                    id="cena_cake"
+                    value="Invitato alla torta"
+                  />
+                  <input
+                  type="hidden"
+                  class="form-control bg-secondary border-0 py-4 px-3"
+                  name="cena"
+                  id="allergia_cake"
+                  value="_"
+                />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <select class="form-control bg-secondary border-0" style="height: 52px;" 
+                            name="presenza"
+                            id="presenza_cake"
+                            required>
+                                <option value="" selected disabled hidden>Dicci che farai</option>
+                                <option>Vengo alla cerimonia e alla torta solo se è buona</option>
+                                <option>Vengo solo alla cerimonia e scappo col riso</option>
+                                <option>Non posso partecipare, ho le lasagne che scadono</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" id="altroInputWrapper" style="display: none;"> <!-- Campo di testo personalizzato per l'opzione "Altro" che inizialmente è nascosto -->
+                        <input type="text" class="form-control bg-secondary border-0 py-4 px-3" placeholder="Specifica altro..." 
+                        name="altroInput"
+                        id="altroInput_cake">
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea class="form-control bg-secondary border-0 py-2 px-3" 
+                        rows="5" 
+                        placeholder="Lascia un messaggio se vuoi..."
+                        name="commento"
+                        id="commento_cake"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" id="cakeButton">Invia <i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- RSVP End -->  
+<!--Content 2 END-->
     </div>
   
     

@@ -134,7 +134,7 @@ function checkPassword() {
 
 function mostraCampoAltro(valoreSelezionato) {
   var altroInputWrapper = document.getElementById("altroInputWrapper");
-  var altroInput = document.getElementById("altroInput");
+  var altroInput = document.getElementById("altroInput_rsvp");
 
   if (valoreSelezionato === "Altro") {
     altroInputWrapper.style.display = "block"; // Mostra il campo "Specifica altro..."
@@ -248,28 +248,41 @@ const newFormData = (inputs) => {
 };
 
 //GOOGLE FORM RSVP
-
 ("use strict");
-const Nome_Cognome = document.querySelector("#Nome_Cognome");
-const cena = document.querySelector("#cena");
-const e_mail = document.querySelector("#e_mail");
-const presenza = document.querySelector("#presenza");
-const allergia = document.querySelector("#allergia");
-const altro = document.querySelector("#altroInput");
-const commento = document.querySelector("#commento");
-const bottone = document.querySelector("#button_rsvp");
-const questionario = document.querySelector("#rsvpform");
+const Nome_Cognome_rsvp = document.querySelector("#Nome_Cognome_rsvp");
+const cena_rsvp = document.querySelector("#cena_rsvp");
+const e_mail_rsvp = document.querySelector("#e_mail_rsvp");
+const presenza_rsvp = document.querySelector("#presenza_rsvp");
+const allergia_rsvp = document.querySelector("#allergia_rsvp");
+const altro_rsvp = document.querySelector("#altroInput_rsvp"); // Correggi il nome della variabile
+const commento_rsvp = document.querySelector("#commento_rsvp");
+const Nome_Cognome_cake = document.querySelector("#Nome_Cognome_cake");
+const cena_cake = document.querySelector("#cena_cake");
+const e_mail_cake = document.querySelector("#e_mail_cake");
+const presenza_cake = document.querySelector("#presenza_cake");
+const allergia_cake = document.querySelector("#allergia_cake");
+const altro_cake = document.querySelector("#altroInput_cake"); // Correggi il nome della variabile
+const commento_cake = document.querySelector("#commento_cake");
+const rsvpButton = document.querySelector("#rsvpButton");
+const cakeButton = document.querySelector("#cakeButton");
+const rsvpForm = document.querySelector("#rsvpform");
+const cakeForm = document.querySelector("#cakeform");
 const GOOGLE_questonario_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSc4WtHCRT3p18zJJ4MrWjv1ARFcL8HcBZkErPJykaTcBSGPaw/formResponse"; // your google form response URL
-const handlSubmit = async (event) => {
+  "https://docs.google.com/forms/d/e/1FAIpQLSc4WtHCRT3p18zJJ4MrWjv1ARFcL8HcBZkErPJykaTcBSGPaw/formResponse";
+const handlSubmit = async (event, form, button) => {
   event.preventDefault();
-  const Nome_CognomeValue = Nome_Cognome.value;
-  const cenaValue = cena.value;
-  const e_mailValue = e_mail.value;
-  const presenzaValue = presenza.value;
-  const allergiaValue = allergia.value;
-  const altroValue = altroInput.value;
-  const commentoValue = commento.value;
+  // Seleziona i campi in base al modulo
+  const Nome_CognomeValue =
+    form === rsvpForm ? Nome_Cognome_rsvp.value : Nome_Cognome_cake.value;
+  const cenaValue = form === rsvpForm ? cena_rsvp.value : cena_cake.value;
+  const e_mailValue = form === rsvpForm ? e_mail_rsvp.value : e_mail_cake.value;
+  const presenzaValue =
+    form === rsvpForm ? presenza_rsvp.value : presenza_cake.value;
+  const allergiaValue =
+    form === rsvpForm ? allergia_rsvp.value : allergia_cake.value;
+  const altroValue = form === rsvpForm ? altro_rsvp.value : altro_cake.value;
+  const commentoValue =
+    form === rsvpForm ? commento_rsvp.value : commento_cake.value;
   const dati = {
     "entry.1011907003": Nome_CognomeValue,
     "entry.1991254785": e_mailValue,
@@ -281,8 +294,8 @@ const handlSubmit = async (event) => {
   };
   const appendedDati = newFormDat({ ...dati });
   try {
-    bottone.disabled = true;
-    bottone.textContent = "processing...";
+    button.disabled = true;
+    button.textContent = "processing...";
     const response = await fetch(GOOGLE_questonario_URL, {
       method: "POST",
       mode: "no-cors",
@@ -295,17 +308,21 @@ const handlSubmit = async (event) => {
     alert("Something went wrong, please try again");
     console.log(error);
   } finally {
-    bottone.disabled = false;
-    bottone.textContent = "Inviato";
+    button.disabled = false;
+    button.textContent = "Inviato";
     setTimeout(function () {
-      questionario.reset();
+      form.reset(); // Resetta il modulo corretto
     }, 1000);
   }
 };
 
-questionario.addEventListener("submit", handlSubmit);
+rsvpForm.addEventListener("submit", (event) =>
+  handlSubmit(event, rsvpForm, rsvpButton)
+);
+cakeForm.addEventListener("submit", (event) =>
+  handlSubmit(event, cakeForm, cakeButton)
+);
 
-// A helper function to help convert the data to Dati
 const newFormDat = (inputs) => {
   const dati = new FormData();
   const newArr = Object.entries(inputs);
