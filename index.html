@@ -8,7 +8,8 @@
     <meta name="description" content="8/06/24 Sant'Antonino" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="8/06/24 Sant'Antonino" name="keywords">
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
 
     <!-- Favicon -->
@@ -19,6 +20,7 @@
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    
     <link rel="shortcut icon" type="image/ring16-icon" sizes="16x16" href="img/favicon/favicon-16x16.png" >
 
     <!-- Google Web Fonts -->
@@ -202,7 +204,7 @@
         </div>
         <div class="owl-carousel gallery-carousel">
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="">
+                <img class="img-fluid w-100" src="img/gallery-1.jpg" alt="" style="max-width: 100%; height: 220px;">
                 <div class="overlay">
                   <a href="img/gallery-11.jpg" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
@@ -210,13 +212,13 @@
                 </div>
               </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-2.jpg" alt="">
+                <img class="img-fluid w-100" src="img/gallery-2.jpg" alt=""style="max-width: 100%; height: 220px;">
                 <a href="img/gallery-2.gif" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
             </div>
             <div class="gallery-item">
-                <img class="img-fluid w-100" src="img/gallery-3.jpg" alt="">
+                <img class="img-fluid w-100" src="img/gallery-3.jpg" alt=""style="max-width: 100%; height: 220px;">
                 <a href="img/gallery-3.jpg" data-lightbox="gallery">
                     <i class="fa fa-2x fa-plus text-white"></i>
                 </a>
@@ -290,94 +292,96 @@
 <!--Lista nozze Start -->
 
 <section id="list">
-    <div class="section-title position-relative text-center" style="margin-bottom: 4 px;">
-        <h1 class="font-secondary display-4 text-blue">Lista nozze</h1>
-        <i class="far fa-heart text-dark"></i>
-    </div>
-    <div class="position-relative text-center">
-    <p>Il vero dono è il vostro affetto e il tempo che ci dedicherete, ma se volete aggiungere un tocco di avventura al nostro viaggio in Perù, saremmo davvero entusiasti di ricevere un piccolo contributo. Grazie a ognuno di voi per essere parte di questa nuova avventura nella nostra vita!</p>
-     <p>Per potervi ringraziare personalmente vi chiediamo, prima di condividervi gli estremi bancari  <i class="fas fa-university"></i>
-        , di compilare questo questionario:</p>
-    </div>
-    <div class="row justify-content-center">
-        <div id="risultato" class="text-center col-lg-8" style="display: none;">
-            <ul class="text-uppercase text-blue" style="list-style-type: none;">
-                <li>IBAN: IT5555</li>
-                <li>Intestatario: IT5555</li>
-                <li>Banca: IT5555</li>
-                <p id="causale"></p>
-            </ul>
+    <div class="container">
+        <div class="section-title position-relative text-center" style="margin-bottom: 4 px;">
+            <h1 class="font-secondary display-4 text-blue">Lista nozze</h1>
+            <i class="far fa-heart text-dark"></i>
         </div>
-        <div class="col-lg-8">
-            <div class="text-center">
-                <main class="container">
-                    <form   name="ibanform"
-                    id="ibanform"
-                    method="post" 
-                    onsubmit="mostraRisultato(event)"
-                    onsubmit="submitted=true;">
-                    <div class="form-row row justify-content-center">
-                        <label class="form-group col-sm-6" for="Nome">
-                          <input
-                            type="text"
-                            class="form-control bg-secondary border-0 py-4 px-3"
-                            placeholder="Nome"
-                            name="Nome"
-                            id="Nome"
-                            required
-                          />
-                        </label>
-                        <label class="form-group col-sm-6" for="Cognome">
-                          <input
-                            type="text"
-                            class="form-control bg-secondary border-0 py-4 px-3"
-                            placeholder="Cognome"
-                            name="Cognome"
-                            id="Cognome"
-                            required
-                          />
-                        </label>
-                        <label class="form-group col-sm-12" for="email">
-                          <input
-                            type="email"
-                            class="form-control bg-secondary border-0 py-4 px-3"
-                            placeholder="Email"
-                            name="email"
-                            id="email"
-                            
-                          />
-                        </label>
+        <div class="position-relative text-center">
+        <p>Il vero dono è il vostro affetto e il tempo che ci dedicherete, ma se volete aggiungere un tocco di avventura al nostro viaggio in Perù, saremmo davvero entusiasti di ricevere un piccolo contributo. Grazie a ognuno di voi per essere parte di questa nuova avventura nella nostra vita!</p>
+        <p>Per potervi ringraziare personalmente vi chiediamo, prima di condividervi gli estremi bancari  <i class="fas fa-university"></i>
+            , di compilare questo questionario:</p>
+        </div>
+        <div class="row justify-content-center">
+            <div id="risultato" class="text-center col-lg-8" style="display: none;">
+                <ul class="text-uppercase text-blue" style="list-style-type: none;">
+                    <li>IBAN: IT5555</li>
+                    <li>Intestatario: IT5555</li>
+                    <li>Banca: IT5555</li>
+                    <p id="causale"></p>
+                </ul>
+            </div>
+            <div class="col-lg-8">
+                <div class="text-center">
+                    <main class="container">
+                        <form   name="ibanform"
+                        id="ibanform"
+                        method="post" 
+                        onsubmit="mostraRisultato(event)"
+                        onsubmit="submitted=true;">
+                        <div class="form-row row justify-content-center">
+                            <label class="form-group col-sm-6" for="Nome">
                             <input
-                            type="hidden"
-                            class="form-control bg-secondary border-0 py-4 px-3"
-                            name="caus"
-                            id="caus"
-                            value="nooo"
-                
-                          />
-                          <label class="form-group col-sm-12" for="comment">
-                            <input
-                              type="text"
-                              class="form-control bg-secondary border-0 py-2 px-3" 
-                              placeholder="Scrivici qualcosa"
-                              name="comment"
-                              id="comment"
-                              
+                                type="text"
+                                class="form-control bg-secondary border-0 py-4 px-3"
+                                placeholder="Nome"
+                                name="Nome"
+                                id="Nome"
+                                required
                             />
-                          </label>
-                        <button type="submit-iban" class="btn btn-primary font-weight-bold py-3 px-5" id="button-iban">Invia <i class="fas fa-paper-plane"></i></button>
-                    </div>
-                    </form> 
-                  </main>
-            </div>
+                            </label>
+                            <label class="form-group col-sm-6" for="Cognome">
+                            <input
+                                type="text"
+                                class="form-control bg-secondary border-0 py-4 px-3"
+                                placeholder="Cognome"
+                                name="Cognome"
+                                id="Cognome"
+                                required
+                            />
+                            </label>
+                            <label class="form-group col-sm-12" for="email">
+                            <input
+                                type="email"
+                                class="form-control bg-secondary border-0 py-4 px-3"
+                                placeholder="Email"
+                                name="email"
+                                id="email"
+                                
+                            />
+                            </label>
+                                <input
+                                type="hidden"
+                                class="form-control bg-secondary border-0 py-4 px-3"
+                                name="caus"
+                                id="caus"
+                                value="nooo"
+                    
+                            />
+                            <label class="form-group col-sm-12" for="comment">
+                                <input
+                                type="text"
+                                class="form-control bg-secondary border-0 py-2 px-3" 
+                                placeholder="Scrivici qualcosa"
+                                name="comment"
+                                id="comment"
+                                
+                                />
+                            </label>
+                            <button type="submit-iban" class="btn btn-primary font-weight-bold py-3 px-5" id="button-iban">Invia <i class="fas fa-paper-plane"></i></button>
+                        </div>
+                        </form> 
+                    </main>
+                </div>
+                </div>
             </div>
         </div>
+        <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
+            <!--  <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
+            <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
+            <i class="far fa-heart text-black"></i>
+        </div>
     </div>
-    <div class="section-title position-relative text-center" style="margin-bottom: 30px;">
-        <!--  <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gallery</h6>-->
-        <!--  <h6 class="text-uppercase text-blue" style="letter-spacing: 3px;">Qui facce sceme di gente felice</h6> -->
-          <i class="far fa-heart text-black"></i>
-          </div>
 </section>
 
 
@@ -691,7 +695,6 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
