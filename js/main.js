@@ -150,7 +150,6 @@ function mostraCampoAltro(valoreSelezionato) {
 
 let codiciUsati = [];
 let codeiban = "AB34";
-
 function generaCodiceCasuale() {
   const lettere = "ABCDEFGHIJKLMNPQRSTUVWXYZ"; // Escludiamo la lettera 'O'
   const cifre = "123456789"; // Escludiamo il numero '0'
@@ -311,7 +310,13 @@ const handlSubmit = async (event, form, button) => {
     button.disabled = false;
     button.textContent = "Inviato";
     setTimeout(function () {
-      form.reset(); // Resetta il modulo corretto
+      if (form === cakeForm) {
+        document.querySelector("#thank-you-message_cake").style.display =
+          "block"; // Mostra il messaggio di ringraziamento
+      } else {
+        document.querySelector("#thank-you-message").style.display = "block"; // Mostra il messaggio di ringraziamento
+      }
+      form.style.display = "none";
     }, 1000);
   }
 };
