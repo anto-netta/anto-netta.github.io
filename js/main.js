@@ -118,15 +118,15 @@
 function checkPassword() {
   var password = document.getElementById("passwordInput").value;
   // Controlla la password
-  if (password === "anto-netta") {
+  if (password === "pizzifritti") {
     document.getElementById("passwordForm").style.display = "none";
     document.getElementById("content1").style.display = "block";
-  } else if (password === "ducati") {
+  } else if (password === "tiramisu") {
     document.getElementById("passwordForm").style.display = "none";
     document.getElementById("content2").style.display = "block";
   } else {
     document.getElementById("errorMessage").textContent =
-      "Password errata. Riprova.(è tutto minuscolo)";
+      "Password errata. Riprova.(è tutto minuscolo senza accenti)";
   }
 }
 
