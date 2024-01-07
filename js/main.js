@@ -336,3 +336,19 @@ const newFormDat = (inputs) => {
   });
   return dati;
 };
+
+//Visualizza libretto messa
+// Ottieni la data corrente
+var dataCorrente = new Date();
+
+// Definisci la data specifica in cui desideri mostrare l'elemento
+var dataDaConfrontare = new Date("2024-01-08");
+
+// Confronta la data corrente con la data specifica
+if (dataCorrente.toDateString() === dataDaConfrontare.toDateString()) {
+  // Mostra l'elemento
+  document.getElementById("elemento-da-mostrare").style.display = "block";
+} else {
+  // Nascondi l'elemento
+  document.getElementById("elemento-da-mostrare").style.display = "none";
+}
