@@ -87,7 +87,7 @@
   // Gallery carousel
   $(".gallery-carousel").owlCarousel({
     autoplay: false,
-    smartSpeed: 1000,
+    smartSpeed: 500,
     dots: false,
     loop: true,
     nav: true,
