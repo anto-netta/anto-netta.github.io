@@ -342,7 +342,7 @@ const newFormDat = (inputs) => {
 var dataCorrente = new Date();
 
 // Definisci la data specifica in cui desideri mostrare l'elemento
-var dataDaConfrontare = new Date("2024-01-08");
+var dataDaConfrontare = new Date("2024-06-08");
 
 // Confronta la data corrente con la data specifica
 if (dataCorrente.toDateString() === dataDaConfrontare.toDateString()) {
